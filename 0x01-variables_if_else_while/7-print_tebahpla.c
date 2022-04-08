@@ -6,6 +6,7 @@
  * desc - prints the lowercase alphabet in reverse, followed by a new line.
  * Return: 0
  */
+
 int main(void)
 {
 	char c = 'z';
@@ -13,9 +14,10 @@ int main(void)
 	while (c >= 'a')
 	{
 		putchar(c);
-		c--;
+		--c;
 	}
 
 	putchar('\n');
+
 	return (0);
 }

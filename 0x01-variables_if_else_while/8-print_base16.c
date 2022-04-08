@@ -7,20 +7,15 @@
  */
 int main(void)
 {
-	char d = '0';
+	int digit =48;
 
-	while (d <= '9')
+	while (digit <= 102)
 	{
-		putchar(d);
-		d++;
-	}
+		putchar(digit);
 
-	char c = 'a';
-
-	while (c <= 'f')
-	{
-		putchar(c);
-		c++;
+		if (digit == 57)
+			digit =+ 39;
+		++digit;
 	}
 
 	putchar('\n');

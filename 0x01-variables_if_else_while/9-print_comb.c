@@ -4,18 +4,22 @@
  * desc - prints all possible combinations of single-digit numbers
  * Return: 0
  */
+
 int main(void)
 {
-	int i, y;
+	int digit = 0;
 
-	for (i = 0; i < 10; i++)
+	while (digit <= 9)
 	{
-		putchar(i + '0');
-	}
+		putchar(digit +48);
 
-	for (y = 'a'; y <= 'f'; y++)
-	{
-		putchar(y);
+		if (digit != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+
+		++digit;
 	}
 
 	putchar('\n');
