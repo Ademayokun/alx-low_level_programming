@@ -2,13 +2,13 @@
 /**
  * main - entry
  * desc - prints the alphabet in lowercase, and then in uppercase
- * return:0
+ * Return:0
  */
 int main(void)
 {
 	char c = 'a';
 
-	while (c <= 'z');
+	while (c <= 'z')
 	{
 		putchar(c);
 		c++;

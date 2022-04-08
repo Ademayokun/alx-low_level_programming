@@ -2,7 +2,7 @@
 /**
  * main - entry
  * desc - prints the alphabet in lowercase
- * 	excepts q an e
+ *	excepts q an e
  * Return: 0
  */
 int main(void)
