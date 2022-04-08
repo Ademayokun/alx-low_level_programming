@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 /***
- * main - entry pint
+ * main - entry point
  * desc - prints the lowercase alphabet in reverse, followed by a new line.
  * Return: 0
  */
