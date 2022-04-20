@@ -6,13 +6,14 @@
 
 int main (void)
 {
+    int i = 0, x = 0, y = 0, z = 0;
+
+    char* alp = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    char* num = "0123456789";
+    char* sym = "`~!@#$%^&*()_-+={}[]\\|:;\"'<>,.?/";
+
         srand (time (NULL));
 
-        char* alp  = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        char* num = "0123456789";
-        char* sym = "`~!@#$%^&*()_-+={}[]\\|:;\"'<>,.?/";
-
-        int i = 0, x = 0, y = 0, z = 0;
 
         printf ("Your Password: ");
 
