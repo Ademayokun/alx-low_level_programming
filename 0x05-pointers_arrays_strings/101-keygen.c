@@ -34,6 +34,7 @@ int password(int password_length)
         printf("*");
     }
     printf("\n");
+    return (password);
 }
 
 
