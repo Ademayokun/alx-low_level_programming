@@ -1,47 +1,27 @@
 #include <stdio.h>
 #include <time.h>
-#include <stdlib.h>
 
-/**
-* desc - to generate random passwords
-* main - entry point
-* return: 0
-*/
+/* C Program Strong Password Generator*/
 
-int password(int password_length)
+int main (void)
 {
-	int i;
-    char list[] = "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{};':\"<>,.?";
-    printf("\t");
+        srand (time (NULL));
 
-    for(i = 0; i < password_length; i++)
+        char* alp  = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        char* num = "0123456789";
+        char* sym = "`~!@#$%^&*()_-+={}[]\\|:;\"'<>,.?/";
+
+        int i = 0, x = 0, y = 0, z = 0;
+
+        printf ("Your Password: ");
+
+        for (i = 0; i < 8; i++)
         {
-            printf("*");
+                x = (rand () % 51) + 1;
+                y = (rand () % 9) + 1;
+                z = (rand () % 31) + 1;
+                printf ("%c%c%c", alp[x], num[y], sym[z]);
         }
-    printf("\n");
-    printf("\t");
-    srand(time(NULL));
 
-
-    for(i = 0; i < password_length; i++)
-    {
-        printf("%c", list[rand() % (sizeof list - 1)]);
-    }
-    printf("\n");
-    printf("\t");
-    for(i = 0; i < password_length; i++)
-    {
-        printf("*");
-    }
-    printf("\n");
-    return (password);
-}
-
-
-int main(void)
-{
-int password_length = 21;
-
-password(password_length);
-return 0;
+        return 0;
 }
