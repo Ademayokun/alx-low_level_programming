@@ -15,8 +15,6 @@ int main (void)
         srand (time (NULL));
 
 
-        printf ("Your Password: ");
-
         for (i = 0; i < 8; i++)
         {
                 x = (rand () % 51) + 1;
