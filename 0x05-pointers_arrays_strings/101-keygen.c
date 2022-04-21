@@ -1,27 +1,24 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
-
-/* C Program Strong Password Generator*/
-
-int main (void)
+#include <time.h>
+/**
+* main - generates keygen.
+* Return: 0 Always.
+*/
+int main(void)
 {
-    int i = 0, x = 0, y = 0, z = 0;
+int r = 0, c = 0;
+time_t t;
 
-    char* alp = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    char* num = "0123456789";
-    char* sym = "`~!@#$%^&*()_-+={}[]\\|:;\"'<>,.?/";
-
-        srand (time (NULL));
-
-
-        for (i = 0; i < 8; i++)
-        {
-                x = (rand () % 51) + 1;
-                y = (rand () % 9) + 1;
-                z = (rand () % 31) + 1;
-                printf ("%c%c%c", alp[x], num[y], sym[z]);
-        }
-
-        return 0;
+srand((unsigned int) time(&t));
+while (c < 2772)
+{
+r = rand() % 128;
+if ((c + r) > 2772)
+break;
+c = c + r;
+printf("%c", r);
+}
+printf("%c\n", (2772 - c));
+return (0);
 }
